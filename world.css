@@ -1,1 +1,33 @@
 /* Add your own styles */
+#country{
+
+ width: 150px;
+ font-size: 20px;
+    
+}
+#lookup{
+    background-color: brown;
+    color:white;
+    font-size: 15px;
+    
+}
+
+#citylookup{
+    background-color: limegreen;
+    color:white;
+}
+table{
+    width: 50%;
+    
+}
+table th{
+    background-color: #005b96;
+    color: white;
+}
+table tr{
+    background-color: #6497b1;
+   
+}
+table tr:nth-child(even) {
+  background: #b3cde0;
+}

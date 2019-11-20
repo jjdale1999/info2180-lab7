@@ -23,12 +23,12 @@ $stmt = $conn->query("SELECT cities.name, cities.district, cities.population FRO
    
     <?php if(isset($_GET)): ?>
         <?php if($context=="cities"): ?>
-         <tr>
+         
                 <th> Country Name</th>
                 <th> District</th>
                 <th> Population</th>
                 
-            </tr>
+            
                 <?php foreach ($results as $row): ?>
                 <tr>
                     <td><?= $row['name']; ?></td>
@@ -38,12 +38,12 @@ $stmt = $conn->query("SELECT cities.name, cities.district, cities.population FRO
             <?php endforeach; ?>
    
         <?php else: ?>
-         <tr>
+         
                 <th> Country Name</th>
                 <th> Continent</th>
                 <th> Independence Year</th>
                 <th> Head of State</th>
-            </tr>
+           
             <?php foreach ($whereresults as $row): ?>
                 <tr>
                     <td><?= $row['name']; ?></td>

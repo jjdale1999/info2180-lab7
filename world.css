@@ -1,23 +1,36 @@
 /* Add your own styles */
+h1{
+    border-bottom-style: solid;
+    border-bottom-color: red;
+    text-align: center;
+    border-bottom-left-radius: 350px;
+    border-bottom-right-radius: 350px;
+}
 #country{
 
  width: 150px;
  font-size: 20px;
+ 
     
+}
+
+button{
+     color:white;
+    font-size: 14px;
+    border-radius: 5px;
 }
 #lookup{
     background-color: brown;
-    color:white;
-    font-size: 15px;
+   
     
 }
 
 #citylookup{
     background-color: limegreen;
-    color:white;
 }
+  
 table{
-    width: 50%;
+    width: 100%;
     
 }
 table th{

@@ -11,7 +11,7 @@ function loadrequest()
     document.getElementById("lookup").onclick= function()
     {
         var httpRequest = new XMLHttpRequest();
-        var url = "http://localhost:8080/world.php?";
+        var url = "world.php?";
         
         
         const data = "country=" + document.getElementById("country").value;
@@ -33,8 +33,7 @@ function loadrequest()
 
         httpRequest.open('GET', url+data,true);
         event.preventDefault();
-       httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-       
+
         
         httpRequest.send();
 

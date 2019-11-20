@@ -11,7 +11,12 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <ul>
-<?php foreach ($results as $row): ?>
+    <?php if(isset($_GET)): ?>
+        <?php $country = $_GET['country']; ?>
+        <?php $countrieswhere = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");?>
+        <?php $whereresults= $countrieswhere->fetchAll(PDO::FETCH_ASSOC);?>
+
+<?php foreach ($whereresults as $row): ?>
   <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
 <?php endforeach; ?>
 </ul>

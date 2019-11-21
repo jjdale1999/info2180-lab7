@@ -5,7 +5,8 @@ $password = 'jordanne';
 $dbname = 'world';
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$country = $_GET['country'];
+if(isset($_GET)){
+    $country = $_GET['country'];
 $context =$_GET['context'];
  
 if($context=="cities"){
@@ -16,12 +17,14 @@ $stmt = $conn->query("SELECT cities.name, cities.district, cities.population FRO
      $countrieswhere = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
      $whereresults= $countrieswhere->fetchAll(PDO::FETCH_ASSOC);
  }
+}
+
  
 
 ?>
  <table>
    
-    <?php if(isset($_GET)): ?>
+    
         <?php if($context=="cities"): ?>
          
                 <th> Country Name</th>
@@ -53,5 +56,5 @@ $stmt = $conn->query("SELECT cities.name, cities.district, cities.population FRO
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>
-    <?php endif; ?>
+   
  </table>
